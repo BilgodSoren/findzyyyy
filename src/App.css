@@ -1,38 +1,230 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --bg: #ffffff;
+  --ink: #0f172a;
+  --muted: #64748b;
+  --line: #e2e8f0;
+  --card: #ffffff;
+  --accent: #2563eb;
+  --accent-ink: #ffffff;
+  --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --shadow-hover: 0 10px 15px -3px rgb(0 0 0 / 0.05), 0 4px 6px -4px rgb(0 0 0 / 0.05);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.wrap {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 56px 24px 80px;
+  width: 100%;
+}
+
+h1 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin: 0 0 8px;
+  letter-spacing: -0.02em;
+}
+
+.sub {
+  margin: 0 0 32px;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+.tabs {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  padding-bottom: 16px;
+  margin-bottom: 24px;
+  /* Hide scrollbar for clean look */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.tabs button {
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 0.95rem;
+  padding: 10px 22px;
+  border-radius: 9999px;
+  border: 1px solid var(--line);
+  background: var(--card);
+  color: var(--muted);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: var(--shadow);
+}
+
+.tabs button:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  transform: translateY(-1px);
+}
+
+.tabs button[aria-pressed="true"] {
+  background: var(--ink);
+  color: #ffffff;
+  border-color: var(--ink);
+  box-shadow: var(--shadow-hover);
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
   display: flex;
   flex-direction: column;
+  gap: 16px;
+}
+
+li a {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 20px 24px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: var(--shadow);
 }
 
-.App-link {
-  color: #61dafb;
+li a:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--accent);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.product-info {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex: 1;
+  min-width: 0;
+}
+
+.product-image {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  flex-shrink: 0;
+}
+
+.product-text {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+}
+
+.name {
+  display: block;
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 4px;
+  letter-spacing: -0.01em;
+  word-wrap: break-word;
+}
+
+.meta {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.buy {
+  flex: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  background: var(--bg);
+  color: var(--accent);
+  border: 1px solid var(--line);
+  padding: 10px 24px;
+  border-radius: 12px;
+  transition: all 0.2s ease;
+}
+
+li a:hover .buy {
+  background: var(--accent);
+  color: var(--accent-ink);
+  border-color: var(--accent);
+}
+
+a:focus-visible, button:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+
+footer {
+  margin-top: 56px;
+  font-size: 0.9rem;
+  color: var(--muted);
+  text-align: center;
+  border-top: 1px solid var(--line);
+  padding-top: 32px;
+  line-height: 1.5;
+}
+
+@media (max-width: 480px) {
+  .wrap {
+    padding: 32px 16px 64px;
   }
-  to {
-    transform: rotate(360deg);
+  
+  h1 {
+    font-size: 1.75rem;
+  }
+  
+  .sub {
+    font-size: 0.95rem;
+  }
+  
+  li a {
+    padding: 16px;
+    gap: 12px;
+  }
+  
+  .product-image {
+    width: 48px;
+    height: 48px;
+  }
+
+  .name {
+    font-size: 1rem;
+  }
+
+  .buy {
+    padding: 8px 16px;
+    font-size: 0.85rem;
+  }
+  
+  .tabs button {
+    padding: 8px 16px;
+    font-size: 0.85rem;
   }
 }

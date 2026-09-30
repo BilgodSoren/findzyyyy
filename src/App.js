@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "./App.css";
+import Header from "./components/Header";
+import Tabs from "./components/Tabs";
+import Product from "./components/Product";
+import Footer from "./components/Footer";
+import { products } from "./data/products";
 
-function App() {
+const cats = ["All", ...new Set(products.map((p) => p.cat))];
+
+export default function App() {
+  const [current, setCurrent] = useState("All");
+  const shown = products.filter((p) => current === "All" || p.cat === current);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main className="wrap">
+      <Header />
+      <Tabs cats={cats} current={current} setCurrent={setCurrent} />
+      <ul>
+        {shown.map((p) => (
+          <Product key={p.name + p.url} {...p} />
+        ))}
+      </ul>
+      <Footer />
+    </main>
   );
 }
-
-export default App;
