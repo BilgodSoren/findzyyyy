@@ -1,7 +1,7 @@
 export default function Product({ name, store, url, image }) {
   return (
     <li>
-      <a href={url} target="_blank" rel="noopener sponsored">
+      <a href={url} target="_blank" rel="noreferrer noopener sponsored">
         <div className="product-info">
           {image && <img src={image} alt={name} className="product-image" />}
           <div className="product-text">
