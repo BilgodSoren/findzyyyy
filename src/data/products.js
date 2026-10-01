@@ -5,7 +5,7 @@ export const products = [
   // 2
   { name: "IBELL MT600SM Electric Chopper", store: "Amazon", cat: "Kitchen", url: "https://link.amazon/A09aXv6jL", image: "https://m.media-amazon.com/images/I/51KZxTfgaZL._SX679_.jpg" },
   // 3
-  { name: "", store: "", cat: "", url: "", image: "" },
+  { name: "Ninja Cordless Blender", store: "Amazon", cat: "Kitchen", url: "https://link.amazon/B00fNjO4A", image: "https://m.media-amazon.com/images/I/61BltT9ZT5L._SL1500_.jpg" },
   // 4
   { name: "", store: "", cat: "", url: "", image: "" },
   // 5
