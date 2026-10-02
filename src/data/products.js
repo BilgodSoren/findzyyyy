@@ -7,7 +7,7 @@ export const products = [
   // 3
   { name: "Ninja Cordless Blender", store: "Amazon", cat: "Kitchen", url: "https://link.amazon/B00fNjO4A", image: "https://m.media-amazon.com/images/I/61BltT9ZT5L._SL1500_.jpg" },
   // 4
-  { name: "", store: "", cat: "", url: "", image: "" },
+  { name: " CloudRain Aroma Diffuser", store: "Amazon", cat: "Decor", url: "https://link.amazon/B0hBrRsfI", image: "https://m.media-amazon.com/images/I/61j8OWWrIVL._SL1000_.jpg" },
   // 5
   { name: "", store: "", cat: "", url: "", image: "" },
   // 6
