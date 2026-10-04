@@ -9,7 +9,7 @@ export const products = [
   // 4
   { name: " CloudRain Aroma Diffuser", store: "Amazon", cat: "Decor", url: "https://link.amazon/B0hBrRsfI", image: "https://m.media-amazon.com/images/I/61j8OWWrIVL._SL1000_.jpg" },
   // 5
-  { name: "", store: "", cat: "", url: "", image: "" },
+  { name: "Laneige Lip Sleeping Mask", store: "Amazon", cat: "Beauty", url: "https://link.amazon/B0dxJKaiO", image: "https://m.media-amazon.com/images/I/41R7LCjddAL._SL1100_.jpg" },
   // 6
   { name: "", store: "", cat: "", url: "", image: "" },
   // 7
