@@ -11,7 +11,7 @@ export const products = [
   // 5
   { name: "Laneige Lip Sleeping Mask", store: "Amazon", cat: "Beauty", url: "https://link.amazon/B0dxJKaiO", image: "https://m.media-amazon.com/images/I/41R7LCjddAL._SL1100_.jpg" },
   // 6
-  { name: "", store: "", cat: "", url: "", image: "" },
+  { name: "Wedding Red Dress Maxi", store: "Amazon", cat: "Fashion", url: "https://link.amazon/B02OLqf2U", image: "https://m.media-amazon.com/images/I/61hg0FSEQfL._SX679_.jpg" },
   // 7
   { name: "", store: "", cat: "", url: "", image: "" },
   // 8
